@@ -31,7 +31,7 @@ library(huxtable)
 
 # Education
 
-```{r}
+```{r edu}
 library(tibble)
 tribble(
   ~ Degree1, ~ Year1, ~ Institution1, ~ Place1,
@@ -46,7 +46,7 @@ tribble(
 
 # Work experience
 
-```{r}
+```{r work}
 tribble(
   ~Year, ~Place, ~Desc, ~Place2, ~details,
   2021, 
@@ -146,7 +146,7 @@ tribble(
 
 # Peer-reviewed publications
 
-```{r pubs}
+```{r peer}
 tribble(
  ~ Year, ~ Place, ~ Project, ~ Position,
 
@@ -201,7 +201,7 @@ tribble(
 
 # Conferences
 
-```{r}
+```{r conf}
 tribble(
   ~Year, ~Type, ~Desc, 
   2018, 
@@ -244,7 +244,7 @@ tribble(
 
 # Tranings
 
-```{r}
+```{r train}
 tribble(
   ~Year, ~Type, ~Desc, 
   
@@ -289,7 +289,32 @@ tribble(
 
 # Relevant skills
 
-```{r consulting}
+```{r skill1}
+Skills<-tribble(
+   ~Computer, ~Laboratory, ~Fieldwork,~ Languages,
+   
+  "R -- Statistica -- SPSS -- Sigmaplot -- QGIS -- Git -- Markdown",
+  
+  "Heavy metal analyses -- Stable isotopes -- Plasma metabolites analyses",
+  
+  "Catching and handling wild animals -- Sample collection: extraction blood & feathers -- Censing populations -- Monitoring breeding success",
+  
+  "Spanish (Mother tongue) -- English (TOEFL iBT 99) -- German (Basic-A2)"
+  
+)
+```
+
+
+```{r skill2}
+Skills %>%
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") 
+  #kable_styling(full_width = F, font_size = 9) %>% 
+  #row_spec(0, bold = T, color = "#009acd") %>% 
+  #row_spec(1, bold = F, color = "#7f7f7f") %>% 
+  #column_spec(column = 1:4, width = '4.75cm')%>% 
+```
+
+```{r skills, eval=FALSE}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
   
@@ -338,13 +363,6 @@ tribble(
 ) %>% 
   detailed_entries(role, dates, company, loc, details)
 ```
-
-
-## Languages
-
-  *	Spanish (mother tongue)
-  *	English (TOEFL iBT 99)
-  *	German (A2)
 
 
 
