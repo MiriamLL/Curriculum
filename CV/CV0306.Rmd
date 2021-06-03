@@ -9,7 +9,8 @@ date: "June 2021"
 headcolor: 009ACD
 output: 
   vitae::awesomecv:
-    keep_tex: false
+    keep_tex: true
+always_allow_html: yes
 header-includes:
   \definecolor{light-gray}{gray}{0.95}
 ---
@@ -20,6 +21,7 @@ library(vitae)
 library(fontawesome)
 library(kableExtra)
 library(tibble)
+library(huxtable)
 ```
 
 # Research interest
@@ -46,84 +48,99 @@ tribble(
 
 ```{r}
 tribble(
-  ~Year, ~Place, ~Position,  ~Desc, 
+  ~Year, ~Place, ~Desc, ~Place2, ~details,
   2021, 
   "Forschung und Technologiezentrum Westküste",
-  "Project: TopMarine",
   "Postdoc researcher", 
+  " ",
+  list("Project: TopMarine"),
   
   2015, 
   "Fondo Noroeste AC (Civil association)",
-  "Project: Composition, abundance and habitat use of birds on shrimp farms on Bahia de Santa Maria, Sinaloa",
   "Field technician",
+  " ",
+  list("Project: Composition, abundance and habitat use of birds on shrimp farms on Bahia de Santa Maria, Sinaloa"),
   
    2014, 
   "CONANP (National Commission of Natural Protected Areas)",
-  "Project: Biological monitoring on Natural Protected Areas (PROMOBI 2014) (focused on Shorebirds)",
   "Field technician", 
+  " ",
+  list("Project: Biological monitoring on Natural Protected Areas (PROMOBI 2014) (focused on Shorebirds)"),
   
    2014, 
   "UNAM-FONATUR (National Autonomous University of Mexico- National Trust Fund for Tourism Development)",
-  "Subproject: Fauna monitoring on project CIP Pacific Coast on Escuinapa, Sinaloa",
   "Advisor", 
+  " ",
+  list("Subproject: Fauna monitoring on project CIP Pacific Coast on Escuinapa, Sinaloa"),
   
    2014, 
   "CONANP (National Commission of Natural Protected Areas)",
-  "Project: Conservation of Species on Risk (PROCER 2014) (focused on American Oystercatcher)",
-   "Field technician", 
+  "Field technician", 
+  " ",
+  list("Project: Conservation of Species on Risk (PROCER 2014) (focused on American Oystercatcher)"),
   
   2014,
   "CONANP-IGC (National Commission of Natural Protected Areas-Gulf of California Islands)",
-  "Course:Introduction to studies on birds",
   "Instructor",
+  " ",
+  list("Course:Introduction to studies on birds"),
   
   2012,
   "Sonoran Joint Venture (Binational Bird Conservation)",
-  "Project: Monitoring seabirds in Santa Maria Bay, Sinaloa: Population size, nesting habitat, reproductive success and diet",
-    "Field technician",
+  "Field technician",
+  " ",
+  list("Project: Monitoring seabirds in Santa Maria Bay, Sinaloa: Population size, nesting habitat, reproductive success and diet"),
   
   2012,
   "CONACYT (National Council on Science and Technology)",
-  "Project: Seabirds as environmental indicators in coastal systems of economic importance",
   "Field technician",
-    
+  " ",
+  list("Project: Seabirds as environmental indicators in coastal systems of economic importance"),
+  
   2012,
-  "Grupo de Ecología y Conservación de Islas A.",
-  "Monitoring Eradication of Invasive Mammals: Farallón de San Ignacio and San Pedro Martir Islands",
+  "Grupo de Ecología y Conservación de Islas A.C.",
   "Field technician",
+  " ",
+  list("Monitoring Eradication of Invasive Mammals: Farallón de San Ignacio and San Pedro Martir Islands"),
   
   2010,
   "Fondo Mexicano de Conservación de la Naturaleza",
-  "Project: Ecological and Ecotoxicological monitoring of the Seabird community of Santa Maria Bay: establishing base lines for the use of bioindicators in decisions of environmental management, Sinaloa",
-    "Field technician",
-  
+  "Field technician",
+  " ",
+  list("Project: Ecological and Ecotoxicological monitoring of the Seabird community of Santa Maria Bay: establishing base lines for the use of bioindicators in decisions of environmental management, Sinaloa"),
   
   2009,
   "Resources from basic science research SEP-CONACYT and PAPIIT",
-  "Project: Morphologic, isotopic and genetic characterization of Calidris mauri in the Northwest of México",
   "Technical assistant",
+  " ",
+  list("Project: Morphologic, isotopic and genetic characterization of \\textit{Calidris mauri} in the Northwest of México"),
   
   2009,
   "Pronatura River of Raptors, Cardel, Veracruz",
-  "Orientation to school groups, local people, and visitors",
   "Education intern",
-    
+  " ",
+  list("Orientation to school groups, local people, and visitors"),
+  
   2009,
   "Ducks Unlimited de México (Binational Bird Conservation)",
-  "Project: Evaluation of the waterbird community in rehabilitated mangroves sites",
   "Technical assistant",
+  " ",
+  list("Project: Evaluation of the waterbird community in rehabilitated mangroves sites"),
   
   2008,
   "University of Guadalajara",
-  "Course: Introduction to the study of birds",
   "Collaborator",
-  
+  " ",
+  list("Course: Introduction to the study of birds"),
   
 ) %>% 
   detailed_entries(
-    paste0({Position},". ",{Place}),
-    Year, 
-    Desc
+    Place,
+    Place2,
+    Desc,
+    Year,
+    details,
+    .protect = FALSE
   )
 ```
 
@@ -134,42 +151,42 @@ tribble(
  ~ Year, ~ Place, ~ Project, ~ Position,
 
   "2020",
-  "Lerma L, Dehnhard N, Luna-Jorquera G, Voigt CC, Garthe S",
+  "\\textbf{Lerma M}, Dehnhard N, Luna-Jorquera G, Voigt CC, Garthe S",
   "Breeding stage, not sex, affects foraging characteristics in masked boobies at Rapa Nui",
   "Beh Ecol Soc 74: 149",
  
    "2020",
-  "Quispe R, Lerma M, Luna N, Portflitt-Toro M, Serratosa J, Luna-Jorquera G ",
-  "Foraging ranges of Humboldt penguins \\textit{Spheniscus humboldti} from Tilgo Island: the critical need for protecting a unique marine habitat. ",
+  "Quispe R, \\textbf{Lerma M}, Luna N, Portflitt-Toro M, Serratosa J, Luna-Jorquera G ",
+  "Foraging ranges of Humboldt penguins \\textit{Spheniscus humboldti}  from Tilgo Island: the critical need for protecting a unique marine habitat. ",
   "Mar Ornithol 48: 205",
  
   "2020",
-  "Lerma, M, Castillo-Guerrero, JA, Hernandez-Vazquez S, Garthe S",
+  "\\textbf{Lerma M}, Castillo-Guerrero JA, Hernandez-Vazquez S, Garthe S",
   "Foraging ecology of a marine top predator in the Eastern Tropical Pacific over 3 years with different ENSO phases",
   "Mar Biol 167: 88",
  
   "2020",
-  "Lerma M, Castillo-Guerrero, J.A., Garcia-Hernandez, J, Fernandez G ",
-  "Zinc concentrations in Blue-footed booby (Sula nebouxii) eggs, nestlings, and adults",
+  "\\textbf{Lerma M}, Castillo-Guerrero J.A., Garcia-Hernandez J, Fernandez G ",
+  "Zinc concentrations in Blue-footed booby \\textit{(Sula nebouxii)} eggs, nestlings, and adults",
   "J Sea Research 165: 101952",
  
    "2020",
-  "Lerma, M, Serratosa J, Luna-Jorquera G, Garthe S",
-  "Foraging ecology of masked boobies (Sula dactylatra) in the world’s largest ‘oceanic desert’",
+  "\\textbf{Lerma, M}, Serratosa J, Luna-Jorquera G, Garthe S",
+  "Foraging ecology of masked boobies \\textit{(Sula dactylatra)} in the world’s largest ‘oceanic desert’",
   "Mar Biol 167: 87",
   
   "2017",
-  "Lerma, M, Castillo-Guerrero, JA, Palacios, E",
-  "Non-Breeding Distribution, Abundance, and Roosting Habitat Use of the American Oystercatcher (Haematopus palliatus frazari) in Sinaloa, Mexico",
+  "\\textbf{Lerma M}, Castillo-Guerrero JA, Palacios E",
+  "Non-Breeding Distribution, Abundance, and Roosting Habitat Use of the American Oystercatcher \\textit{(Haematopus palliatus frazari)} in Sinaloa, Mexico",
   "Waterbirds 40: 95-103",
  
    "2017",
-  "Lerma, M, Castillo-Guerrero, JA, Ruelas-Inzunza J, Fernandez, G",
-  "Lead, cadmium and mercury in the blood of the blue-footed booby (Sula nebouxii) from the coast of Sinaloa, Gulf of California, Mexico",
+  "\\textbf{Lerma M}, Castillo-Guerrero JA, Ruelas-Inzunza J, Fernandez, G",
+  "Lead, cadmium and mercury in the blood of the blue-footed booby \\textit{(Sula nebouxii)} from the coast of Sinaloa, Gulf of California, Mexico",
   "Mar Poll Bull 110: 293-298",
   
-    "2016",
-  "Castillo-Guerrero, JA, Lerma, M, Mellink, E, Suazo-Guillén, E, Peñaloza-Padilla, E A",
+  "2016",
+  "Castillo-Guerrero JA, \\textbf{Lerma M}, Mellink E, Suazo-Guillén E, Peñaloza-Padilla EA",
   "Environmentally-mediated flexible foraging strategies in Brown Boobies in the Gulf of California",
   "Ardea 104: 33-57",
  
@@ -178,7 +195,8 @@ tribble(
   detailed_entries(Place, 
                    Position,
                    Project, 
-                   Year)
+                   Year,
+                   .protect = FALSE)
 ```
 
 # Conferences
@@ -237,7 +255,7 @@ tribble(
   
   "2020/Nov-2021/Feb", 
   "Universidad Científica del Sur. Online, Peru",
-  "Programación en R para estudios de biolohhinh de vertebrados marinos y sus interacciones con la actividad pesquera en el Peru", 
+  "Programación en R para estudios de biologging de vertebrados marinos y sus interacciones con la actividad pesquera en el Peru", 
   
   "2018/Sept/10-21", 
   "Max Planck Institute. Radolfzell, Germany",
@@ -271,25 +289,56 @@ tribble(
 
 # Relevant skills
 
-## Computer
-  *	Proficient in statistical programs: R, Statistica, SPSS, Sigmaplot, R, basic Python, css, html
-  *	Proficient in Geographic Information Systems: QGIS
+```{r consulting}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  
+  "Statistical analyses", # Second #mayusculas
+  "Computer skills",  #First, bold
+  "", #Azul derecha
+  "",  #Gris derecha
+  
+  list("R",
+       "Statistica",
+       "SPSS",
+       "Sigmaplot"
+    ),
+  
+  "Spatial analyses", # Second #mayusculas
+  "Computer skills",  #First, bold
+  "", #Azul derecha
+  "",  #Gris derecha
+  
+  list("R",
+       "QGIS"
+    ),
+  
+  " ", # Second #mayusculas
+  "Fieldwork skills",  #First, bold
+  "", #Azul derecha
+  "",  #Gris derecha
+  
+  list("Catching and handling wild animals",
+       "Sample collection: extraction of blood and feathers",
+       "Censing populations, monitoring breeding success"
+    ),
+  
+  " ", # Second #mayusculas
+  "Laboratory skills",  #First, bold
+  "", #Azul derecha
+  "",  #Gris derecha
+  
+  list("Dissection of birds",
+       "Determination of heavy metal concentrations",
+       "Stable isotopes analyses",
+       "Physiological (plasma metabolites) analyses"
+    )
+    
+  
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
 
-## Fieldwork
-  *	Catching and handling wild animals
-  *	Sample collection: extraction of blood and feathers
-  *	Censing populations, monitoring breeding success
-
-## Laboratory
-
-  *	Dissection of birds
-  *	Determination of heavy metal concentrations
-  *	Stable isotopes analyses
-  *	Physiological (plasma metabolites) analyses
-
-##  Teaching
-
-  *	University teaching: Experimental design and R programming. Centro de Investigación  en Alimentación y Desarrollo A. C. Mazatlán, Mexico. January-May 2021. 
 
 ## Languages
 
