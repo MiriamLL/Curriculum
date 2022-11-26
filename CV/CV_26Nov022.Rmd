@@ -224,7 +224,7 @@ tribble(
   
   2022, 
   "Deutschen Ornithologen-Gesellschaft", 
-  "Wilhelmshaven, Germany",
+  "Wilhelmshaven, DE",
   #"Comparison between digital and observer-based aerial surveys for monitoring birds at sea",
   
   2021, 
@@ -235,22 +235,22 @@ tribble(
   
   2018, 
   "Pacific Seabird Group 45th Meeting", 
-  "La Paz, Mexico",
+  "La Paz, MX",
   #"Foraging behavior of Masked boobies in the world’s largest oceanic desert.", Won best PhD talk. ,
   
   2017, 
   "VI Reunión Internacional de Investigadores del Archipiélago Revillagigedo", 
-  "Colima, México",
+  "Colima, MX",
   #"Áreas de alimentación del bobo enmascarado Sula dactylatra durante la época reproductiva en Isla Clarión",
   
    2017, 
   "41th Waterbirds 2017", 
-  "Reykjavik, Iceland",
+  "Reykjavik, IS",
   #"Foraging of Masked Boobies in Motu Nui, Easter Island, Chile, during the breeding season 2016."
   
    2015, 
   "Waterbirds 2015: Challenges and Responses", 
-  "Bar Harbor, Maine",
+  "Bar Harbor, US",
   #"Non-breeding Abundance, Distribution and Habitat Use by American Oystercatcher Haematopus palliatus frazari in Sinaloa, Mexico."
   
    2013, 
@@ -260,7 +260,7 @@ tribble(
   
   2011,
   "Congress for the study and conservation of the birds in Mexico",
-  "Mazatlán, Mexico",
+  "Mazatlán, MX",
   #"Plasticity of Foraging Ecology of the Brown Booby (Sula leucogaster) in the North of California Gulf. Won 2nd place in the Bachelor’s category".
   
 ) %>% 
