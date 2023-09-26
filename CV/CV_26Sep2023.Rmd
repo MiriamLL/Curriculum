@@ -48,7 +48,7 @@ tribble(
   list("Project: MarBird"),
   
   "2021", 
-  "Forschung und Technologiezentrum Westküste",
+  "Forschung und Technologiezentrum Westküste (FTZ, Kiel University)",
   "Postdoc researcher", 
   " ",
   list("Project: TopMarine"),
