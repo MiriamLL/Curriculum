@@ -1,8 +1,8 @@
 ---
 name: Miriam
 surname: Lerma 
-position: "Postdoctoral researcher"
-address: "Forschung und Technologiezentrum Westküste Der Christian-Albrecht-Universität zu Kiel"
+position: "Research Associate"
+address: "13 Bun Penny, CT6 5EW, Herne Bay, UK"
 www: www.miriam-lerma.com
 email: "lerma@ftz-west.uni-kiel.de"
 date: "Sep 2023"
@@ -61,7 +61,7 @@ tribble(
   " ",
   list("Project: MarBird"),
   
-  "2021-current", 
+  "2021", 
   "Forschung und Technologiezentrum Westküste",
   "Postdoc researcher", 
   " ",
@@ -162,6 +162,11 @@ tribble(
 tribble(
  ~ Year, ~ Place, ~ Project, ~ Position,
 
+ "2023",
+  "\\textbf{Lerma M}, Villavicencio C, Luna N, Portflitt-Toro M, Serratosa J, Luna-Jorquera G, Garthe S, Quispe R",
+  "Corticosterone levels, leukocyte profiles, and foraging and diving behaviours of Humboldt penguins during chick rearing in Northern Chile",
+  "Emu 123: 71-78",
+ 
   "2022",
   "\\textbf{Lerma M}, Dehnhard N, Castillo-Guerrero A, Fernandez G",
   "Nutritional state variations in a tropical seabird throughout its breeding season",
@@ -221,6 +226,10 @@ tribble(
 ```{r conf}
 tribble(
   ~Year, ~Type, ~Desc,
+  2023,
+  "Pacific Seabird Group",
+  "San Diego, US",
+  #"Comparison between digital and observer based aerial surveys for monitoring seabirds at sea",
   
   2022, 
   "Deutschen Ornithologen-Gesellschaft", 
