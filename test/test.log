@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.26)  26 SEP 2023 16:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.26)  26 SEP 2023 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CV_26Sep2023.tex
-(./CV_26Sep2023.tex
+**test.tex
+(./test.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
 (./awesome-cv.cls
@@ -632,11 +632,11 @@ l.82 \definecolor{light-gray}{gray}{0.95} ¶
                                             
 Here is how much of TeX's memory you used:
  32188 strings out of 477583
- 656691 string characters out of 5816311
+ 656659 string characters out of 5816311
  1911416 words of memory out of 5000000
  52913 multiletter control sequences out of 15000+600000
  558709 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 116i,0n,121p,550b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,0n,121p,542b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 No pages of output.
